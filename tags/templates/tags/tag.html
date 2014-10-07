@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Tag "{{ tag.name }}"{% endblock %}
+
+{% block content %}
+
+<h1>Tag "{{ tag.name }}"</h1>
+
+<ul>
+    {% for item in tag.tagitem_set.all %}
+    <li><a href="{{ item.obj.get_absolute_url }}">{{ item.obj }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
