@@ -1,13 +1,6 @@
-{% extends "layout.html" %}
-
-{% block title %} Tags {% endblock %}
-
-{% block content %}
 <h1>Tags</h1>
 <ul>
     {% for tag in list %}
     <li><a href="{{ tag.get_absolute_url }}">{{ tag }}</a></li>
     {% endfor %}
 </ul>
-
-{% endblock content %}
