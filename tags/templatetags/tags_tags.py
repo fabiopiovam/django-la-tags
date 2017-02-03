@@ -15,3 +15,10 @@ def get_tags(obj):
         )
 
     return [item.tag for item in items]
+
+@register.assignment_tag
+def tags_cloud():
+    
+    tags = TagItem.objects.top_tags(20)
+    
+    return tags
