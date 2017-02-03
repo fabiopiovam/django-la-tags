@@ -45,6 +45,7 @@ Django app for managing Tags
 - Show top tags:
     ``` html
     ...
+    {% load tags_tags %}
     {% tags_cloud as tags %}
     {% for tag in tags %}
     <a href="/tags/{{ tag.tag__name }}/">{{ tag.tag__name }}</a> ({{ tag.score }}),
