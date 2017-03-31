@@ -1,7 +1,8 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 
-from models import Tag
+from .models import Tag
+
 
 def tags(request):
     list = Tag.objects.all()
@@ -10,6 +11,7 @@ def tags(request):
         locals(),
         context_instance=RequestContext(request),
     )
+
 
 def tag(request, tag_name):
     tag = get_object_or_404(Tag, name=tag_name)

@@ -1,6 +1,9 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import url
 
-urlpatterns = patterns('tags.views',
-    url(r'^$', 'tags', name='tags'),
-    url(r'^(?P<tag_name>.*?)/$', 'tag', name='tag'),
-)
+from . import views
+
+
+urlpatterns = [
+    url(r'^$', views.tags, name='tags'),
+    url(r'^(?P<tag_name>.*?)/$', views.tag, name='tag'),
+]
