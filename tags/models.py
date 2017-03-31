@@ -10,7 +10,7 @@ from django.db.models import Count
 class Tag(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def get_absolute_url(self):
