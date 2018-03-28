@@ -1,5 +1,4 @@
-django-la-tags
-==============
+# django-la-tags
 
 Django app for managing Tags
 
@@ -7,7 +6,7 @@ Django app for managing Tags
 
 - Add tags into `INSTALLED_APPS`;
 
-- Execute `python manage.py syncdb`;
+- Execute `python manage.py migrate`;
 
 - Django admin: Implement tags into `admin.py` of a APP. Ex.:
     ``` python
